@@ -14,6 +14,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.mobileclient.ui.theme.MobileClientTheme
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.unit.dp
+import androidx.compose.foundation.layout.padding
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,10 +35,10 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Surface(color = Color.Yellow) {
+    Surface(color = Color.Yellow, modifier = modifier.padding(50.dp)) {
         Text(
         text = "Hello Dev $name!",
-        modifier = modifier
+        modifier = modifier.padding(24.dp)
     )
     }
 }
